@@ -11,7 +11,7 @@ const ProductCard = () => {
       <h5 className="mb-2 text-xl font-medium leading-tight">Card title</h5>
       <p className="mb-4 text-base">
         Some quick example text to build on the card title and make up the
-        bulk of the card's content.
+        bulk of the card&apos;s content.
       </p>
       <button
         type="button"
