@@ -57,7 +57,7 @@ const ProductCard = ({ name, description, price, image, id }) => {
     };
 
     return (
-        <div className="border rounded-lg shadow-md overflow-hidden w-full max-w-sm bg-white flex flex-col max-h-[180px] min-h-[180px] ">
+        <div className="border rounded-lg shadow-md overflow-hidden w-full max-w-sm bg-white flex flex-col max-h-[180px] min-h-[180px] sm:max-h-[330px] sm:min-h-[330px] ">
             <div className="relative sm:block hidden" style={{ paddingBottom: '50%' }}>
                 <img
                     src={image}
