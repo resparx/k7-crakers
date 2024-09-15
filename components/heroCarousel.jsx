@@ -21,7 +21,7 @@ const HeroCarousel = ({ items, interval = 3000 }) => {
     }, [currentIndex, interval]);
 
     return (
-        <div className="mt-20 relative w-full overflow-hidden">
+        <div className="sm:mt-20 mt-16 relative w-full overflow-hidden">
             <div
                 className="flex transition-transform duration-500 ease-in-out"
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}
