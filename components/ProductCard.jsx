@@ -1,6 +1,7 @@
 'use client'
 
 import { AppContext } from '@/app/page';
+import formatToINR from '@/utils/formatToInr';
 import React, { useContext, useState } from 'react';
 
 
@@ -56,7 +57,7 @@ const ProductCard = ({ name, description, price, image, id }) => {
     };
 
     return (
-        <div className="border rounded-lg shadow-md overflow-hidden w-full max-w-sm bg-white flex flex-col">
+        <div className="border rounded-lg shadow-md overflow-hidden w-full max-w-sm bg-white flex flex-col max-h-[180px] min-h-[180px] ">
             <div className="relative sm:block hidden" style={{ paddingBottom: '50%' }}>
                 <img
                     src={image}
@@ -67,9 +68,9 @@ const ProductCard = ({ name, description, price, image, id }) => {
             <div className="p-4 flex flex-col flex-grow">
                 <h2 className="text-slate-700 text-xl font-semibold mb-2">{name}</h2>
                 <p className="text-slate-500 mb-2">{description}</p>
-                <div className='mt-10 flex justify-between items-center'>
-                    <p className="text-lg text-slate-600 font-bold mb-2">Rs {price}</p>
-                    <div className="flex items-center mb-4">
+                <div className='mt-auto flex justify-between items-center'>
+                    <p className="text-lg text-slate-600 font-bold">{formatToINR(price)}</p>
+                    <div className="flex items-center">
                         <button
                             onClick={() => handleQuantityChange(-1)}
                             className="px-3 py-1 border rounded-lg bg-slate-200 text-slate-700"

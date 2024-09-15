@@ -9,7 +9,7 @@ const   CartModal = ({ isOpen, onClose }) => {
     
     return (
         <div className="fixed inset-0 bg-gray-800 bg-opacity-75 flex cartItems-center justify-center z-50">
-              <div className="bg-white rounded-lg shadow-lg w-[50vw] my-auto mx-4 md:mx-0 h-[80vh] overflow-scroll">
+              <div className="bg-white rounded-lg shadow-lg w-screen sm:w-[50vw] my-auto mx-4 md:mx-0 h-[80vh] overflow-scroll">
                 <div className="flex cartItems-center justify-between p-4 border-b">
                     <h2 className="text-slate-950 text-xl font-bold">Your Cart</h2>
                     <button onClick={onClose} className="text-gray-500 hover:text-gray-700">
