@@ -15,16 +15,16 @@ export default function Home() {
 
 const menuItems = [
   { label: 'One sound Crakcers', href: '#' },
-  { label: 'About', href: '#' },
-  { label: 'Services', href: '#' },
-  { label: 'Contact', href: '#' },
+  { label: 'Mini lar', href: '#' },
+  { label: 'Deluxe crakers', href: '#' },
+  { label: 'Garland crakers', href: '#' },
 ];
 
   return (
    <div className="bg-white relative">
     <Navbar/>
     <HeroCarousel items={items}/>
-    <div className="flex ">
+    <div className="flex relative">
       <SideMenu items={menuItems}/>
       <ProductCardWrapper/>
     </div>

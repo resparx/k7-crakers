@@ -4,22 +4,36 @@ import { useState } from 'react';
 
 const SideMenu = ({ items }) => {
 
+    const [checkedItems, setCheckedItems] = useState({});
+
+    const handleCheckboxChange = (item) => {
+        setCheckedItems((prev) => ({
+            ...prev,
+            [item]: !prev[item]
+        }));
+    };
+
     return (
-            <div
-                className={`rounded-r-lg mt-4 top-0 left-0 h-full w-64 bg-gray-800 text-white shadow-lg`}
-            >
-                <div className="p-4">
-                    <ul className="space-y-2">
-                        {items.map((item, index) => (
-                            <li key={index}>
-                                <a href={item.href} className="block p-2 hover:bg-gray-700 rounded">
-                                    {item.label}
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            </div>
+        <div className="rounded-r-lg mt-4 ] bg-gray-900 text-white shadow-lg w-64">
+        <div className="p-4">
+            <ul className="space-y-2">
+                {items.map((item, index) => (
+                    <li key={index} className="flex items-center">
+                        <input
+                            type="checkbox"
+                            id={`checkbox-${index}`}
+                            checked={!!checkedItems[item.label]}
+                            onChange={() => handleCheckboxChange(item.label)}
+                            className="mr-2"
+                        />
+                        <label htmlFor={`checkbox-${index}`} className="cursor-pointer">
+                            {item.label}
+                        </label>
+                    </li>
+                ))}
+            </ul>
+        </div>
+    </div>
     );
 };
 
