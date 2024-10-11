@@ -6,6 +6,7 @@ import HeroCarousel from "@/components/heroCarousel";
 import ProductBatchWrapper from "@/components/productBatchWrapper";
 
 import CartModal from "@/components/cartModal";
+import Footer from "@/components/footer";
 
 export const AppContext = createContext(null);
 
@@ -22,7 +23,7 @@ export default function Home() {
     { src: 'https://via.placeholder.com/800x300?text=Slide+3', alt: 'Slide 3' },
   ];
 
-  console.log(store.cartItems, "cas")
+
   return (
     <AppContext.Provider value={{store, setStore}}>
       <div className="bg-white relative">
@@ -33,6 +34,7 @@ export default function Home() {
           <ProductBatchWrapper />
         </div>
         <CartModal />
+        <Footer/>
       </div>
     </AppContext.Provider>
   );
